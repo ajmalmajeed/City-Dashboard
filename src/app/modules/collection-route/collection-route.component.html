@@ -1,0 +1,22 @@
+<div id="pickupsContainer">
+  <h2 id="heading">Pickup Schedule</h2>
+    <ul>
+      <li id="pickupLocation" *ngFor="let bin of bins | async">
+        {{bin.locationTitle}}
+      </li>
+    </ul>
+</div>
+
+<!--<agm-map [latitude]="latitude" [longitude]="longitude">-->
+<!--<agm-marker *ngFor="let bin of bins | async" [latitude]="bin.location.latitude" [longitude]="bin.location.longitude">-->
+
+<!--</agm-marker>-->
+<!--</agm-map>-->
+
+
+<agm-map> [latitude]="latitude" [longitude]="longitude">
+  <agm-direction *ngFor="let bin of bins | async" [origin]="origin" [destination]="destination" [waypoints]="[{location: {lat: bin.location.latitude, lng: bin.location.longitude}}]">
+
+  </agm-direction>
+</agm-map>
+
