@@ -1,9 +1,11 @@
-<h2 id="heading">Active Users</h2>
+<h1>Active Users</h1>
 
 <agm-map [zoom]="12" [latitude]="latitude" [longitude]="longitude">
-  <agm-overlay *ngFor="let disposal of disposals | async" [latitude]="disposal.coordinates.latitude" [longitude]="disposal.coordinates.longitude">
+  <agm-overlay
+    *ngFor="let disposal of disposals | async"
+    [latitude]="disposal.coordinates.latitude"
+    [longitude]="disposal.coordinates.longitude"
+  >
     <div id="shade"></div>
-
   </agm-overlay>
-
 </agm-map>

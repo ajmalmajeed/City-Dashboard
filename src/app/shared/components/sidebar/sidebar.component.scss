@@ -2,6 +2,7 @@
   .mat-icon {
     vertical-align: middle;
     margin-right: 20px;
+    color: #135e4f;
   }
   .profile-card {
     text-align: center;
@@ -12,5 +13,8 @@
       object-fit: cover;
       border-radius: 50%;
     }
+  }
+  .mat-list-base {
+    padding-top: unset;
   }
 }
