@@ -24,7 +24,7 @@ export class HeatMapComponent implements OnInit {
 
   getCoordinates() {
 
-    this.disposalsCollection = this.afs.collection('disposalData');
+    this.disposalsCollection = this.afs.collection('disposals');
 
     this.disposals = this.disposalsCollection.valueChanges();
     console.log('BINS' + this.disposals);

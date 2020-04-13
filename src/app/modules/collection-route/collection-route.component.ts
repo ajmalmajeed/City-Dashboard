@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import {BinModel} from '../../models/bin.model';
+import {DisposalsModel} from '../../models/disposals.model';
 
 @Component({
   selector: 'app-collection-route',
@@ -10,8 +11,8 @@ import {BinModel} from '../../models/bin.model';
 })
 export class CollectionRouteComponent implements OnInit {
 
-  binsCollection: AngularFirestoreCollection<BinModel>;
-  bins: Observable<BinModel[]>;
+  binsCollection: AngularFirestoreCollection<DisposalsModel>;
+  bins: Observable<DisposalsModel[]>;
 
   latitude;
   longitude;
@@ -27,22 +28,23 @@ export class CollectionRouteComponent implements OnInit {
 
   getGeopointFirestore() {
 
-    this.binsCollection = this.afs.collection('bins', ref => {
-      return ref
-        .where('isFull', '==', true)
-    });
+    // this.binsCollection = this.afs.collection('bins', ref => {
+    //   return ref
+    //     .where('isFull', '==', true);
+    // });
 
+    this.binsCollection = this.afs.collection('disposals');
     this.bins = this.binsCollection.valueChanges();
-    console.log('BINS' + this.bins)
+    console.log('BINS' + this.bins);
 
     this.binsCollection.snapshotChanges().forEach(changes => {
       return changes.forEach(a => {
         const id = a.payload.doc.id;
-        this.latitude = a.payload.doc.data().location.latitude;
-        this.longitude = a.payload.doc.data().location.longitude;
+        this.latitude = a.payload.doc.data().coordinates.latitude;
+        this.longitude = a.payload.doc.data().coordinates.longitude;
         // return {id: id, latitude: latitude, longitude: longitude};
 
-      })
+      });
 
     });
 

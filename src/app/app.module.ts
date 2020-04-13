@@ -12,11 +12,13 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {HttpClientModule} from '@angular/common/http';
 import {AgmCoreModule} from '@agm/core';
 import {AgmOverlays} from 'agm-overlays';
+import { DisposalsStatsComponent } from './modules/disposals-stats/disposals-stats.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    DisposalsStatsComponent,
   ],
   imports: [
     BrowserModule,

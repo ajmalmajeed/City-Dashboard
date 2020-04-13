@@ -2,7 +2,7 @@
   <h1>Pickup Schedule</h1>
   <ul class="list-section">
     <li id="pickupLocation" *ngFor="let bin of bins | async">
-      {{ bin.locationTitle }}
+      {{ bin.location }}
     </li>
   </ul>
 </div>
@@ -20,7 +20,7 @@
     [origin]="origin"
     [destination]="destination"
     [waypoints]="[
-      { location: { lat: bin.location.latitude, lng: bin.location.longitude } }
+      { location: { lat: bin.coordinates.latitude, lng: bin.coordinates.longitude } }
     ]"
   >
   </agm-direction>

@@ -5,6 +5,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostsComponent } from './modules/posts/posts.component';
 import {CollectionRouteComponent} from './modules/collection-route/collection-route.component';
 import {HeatMapComponent} from './modules/heat-map/heat-map.component';
+import {DisposalsStatsComponent} from './modules/disposals-stats/disposals-stats.component';
 
 const routes: Routes = [{
   path: '',
@@ -23,6 +24,10 @@ const routes: Routes = [{
     {
       path: 'heat-map',
       component: HeatMapComponent
+    },
+    {
+      path: 'disposal-stats',
+      component: DisposalsStatsComponent
     }]
 }];
 
