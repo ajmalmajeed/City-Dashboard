@@ -50,6 +50,7 @@ export class DisposalsStatsComponent implements OnInit {
     this.getPlasticsItemsCount();
     this.getGlassItemsCount();
     this.getFlipFlopsCount();
+    // window.location.reload();
 
   }
 

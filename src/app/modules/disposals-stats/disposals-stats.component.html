@@ -1,5 +1,15 @@
 <h1>Disposal Statistics</h1>
 
+<p>Overall Disposals Made By Users.</p>
+<div class="dropdown">
+  <button class="dropbtn">During The Period &nbsp;<i class="down"></i></button>
+  <div class="dropdown-content">
+    <a>Last Week</a>
+    <a>Last Month</a>
+    <a>Last Three Month</a>
+  </div>
+</div>
+
 <table class="table">
 
   <thead>
@@ -7,7 +17,7 @@
     <th class="tableHeading">Disposal Type</th>
     <th class="tableHeading">
       <div class="dropdown">
-        <button class="dropbtn">Location</button>
+        <button class="dropbtn">Location &nbsp;<i class="down"></i></button>
         <div class="dropdown-content">
           <a>Dehiwala-Mt. Lavania</a>
           <a>Wellawatte</a>
@@ -21,7 +31,7 @@
       </div>
     </th>
     <th class="tableHeading">Quantity</th>
-    <th class="tableHeading">percentage</th>
+    <th class="tableHeading">Percentage</th>
   </tr>
   </thead>
 
@@ -88,3 +98,7 @@
   </tr>
   </tbody>
 </table>
+
+<br>
+
+<app-pie-chart></app-pie-chart>
