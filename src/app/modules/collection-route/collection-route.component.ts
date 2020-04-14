@@ -13,6 +13,7 @@ export class CollectionRouteComponent implements OnInit {
 
   binsCollection: AngularFirestoreCollection<DisposalsModel>;
   bins: Observable<DisposalsModel[]>;
+  uniqueLocations = [];
 
   latitude;
   longitude;
@@ -32,13 +33,15 @@ export class CollectionRouteComponent implements OnInit {
     //   return ref
     //     .where('isFull', '==', true);
     // });
-
     this.binsCollection = this.afs.collection('disposals');
     this.bins = this.binsCollection.valueChanges();
     console.log('BINS' + this.bins);
 
     this.binsCollection.snapshotChanges().forEach(changes => {
       return changes.forEach(a => {
+        if (this.uniqueLocations.indexOf(a.payload.doc.data().location) === -1) {
+          this.uniqueLocations.push(a.payload.doc.data().location);
+        }
         const id = a.payload.doc.id;
         this.latitude = a.payload.doc.data().coordinates.latitude;
         this.longitude = a.payload.doc.data().coordinates.longitude;

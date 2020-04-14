@@ -9,38 +9,12 @@ h4 {
 
 .mat-icon,
 .description {
-  font-size: 1.3em;
+  color: green;
+  font-size: 2em;
 }
 
 .mat-icon {
   position: relative;
+  padding: 0 20px;
   top: 5px;
-}
-.text {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  .text-improvement {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    .text-percentage {
-      display: flex;
-      .mat-icon {
-        top: 2px;
-        color: #15bf34;
-      }
-      .description {
-        font-weight: 500;
-      }
-    }
-    .percentage-description {
-      font-size: 14px;
-    }
-  }
-  .text-description {
-    .label {
-      font-weight: 400;
-    }
-  }
 }

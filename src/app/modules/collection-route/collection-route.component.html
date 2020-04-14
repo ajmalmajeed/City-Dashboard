@@ -1,8 +1,11 @@
 <div id="pickupsContainer">
   <h1>Pickup Schedule</h1>
+
+  <p>Pickups Scheduled For Today.</p>
+
   <ul class="list-section">
-    <li id="pickupLocation" *ngFor="let bin of bins | async">
-      {{ bin.location }}
+    <li id="pickupLocation" *ngFor="let location of uniqueLocations">
+      {{ location }}
     </li>
   </ul>
 </div>
