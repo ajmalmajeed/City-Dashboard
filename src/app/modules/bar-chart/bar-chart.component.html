@@ -1,9 +1,9 @@
-
-
 <app-timeline-charts><</app-timeline-charts>
-<br>
+<br />
 <div class="dropdown">
-  <button class="dropbtn">Location  <i class="down"></i></button>
+  <button class="dropbtn">
+    Location <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
   <div class="dropdown-content">
     <a>Dehiwala-Mt. Lavania</a>
     <a>Wellawatte</a>
@@ -17,13 +17,15 @@
 </div>
 
 <div>
-  <div style="display: block">
-    <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartType">
+  <div style="display: block;">
+    <canvas
+      baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+    >
     </canvas>
   </div>
 </div>
