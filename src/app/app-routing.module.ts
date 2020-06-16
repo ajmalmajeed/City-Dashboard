@@ -9,38 +9,49 @@ import {DisposalsStatsComponent} from './modules/disposals-stats/disposals-stats
 import {TimelineChartsComponent} from './modules/timeline-charts/timeline-charts.component';
 import {BarChartComponent} from './modules/bar-chart/bar-chart.component';
 import {PieChartComponent} from './modules/pie-chart/pie-chart.component';
+import {LoginComponent} from './modules/login/login.component';
+import {AuthGuard} from './services/auth-guard.service';
 
 const routes: Routes = [{
   path: '',
   component: DefaultComponent,
   children: [{
     path: '',
-    component: DashboardComponent
-  }, {
-    path: 'posts',
-    component: PostsComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
     {
+      path: 'login', component: LoginComponent
+    },
+    {
       path: 'collection-route',
-      component: CollectionRouteComponent
+      component: CollectionRouteComponent,
+      canActivate: [AuthGuard]
     },
     {
       path: 'heat-map',
-      component: HeatMapComponent
+      component: HeatMapComponent,
+      canActivate: [AuthGuard]
     },
     {
       path: 'disposal-stats',
-      component: DisposalsStatsComponent
+      component: DisposalsStatsComponent,
+      canActivate: [AuthGuard]
     },
     {
       path: 'timeline-charts',
-      component: BarChartComponent
+      component: BarChartComponent,
+      canActivate: [AuthGuard]
     },
     {
-      path: 'bar-chart', component: BarChartComponent
+      path: 'bar-chart',
+      component: BarChartComponent,
+      canActivate: [AuthGuard]
     },
     {
-      path: 'pie-chart', component: PieChartComponent
+      path: 'pie-chart',
+      component: PieChartComponent,
+      canActivate: [AuthGuard]
     }]
 }];
 

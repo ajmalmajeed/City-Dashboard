@@ -6,31 +6,49 @@
 
     <span>CityCollection Dashboard</span>
 
-    <!--        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">-->
-    <!--            <ul fxLayout="row" fxLayoutGap="20px">-->
-    <!--                <li>-->
-    <!--                    <button mat-icon-button>-->
-    <!--                        <mat-icon>settings</mat-icon>-->
-    <!--                    </button>-->
-    <!--                </li>-->
-    <!--                <li>-->
-    <!--                    <button mat-icon-button>-->
-    <!--                        <mat-icon>help_outline</mat-icon>-->
-    <!--                    </button>-->
-    <!--                </li>-->
-    <!--                <li>-->
-    <!--                    <button mat-button [matMenuTriggerFor]="menu">-->
-    <!--                        <mat-icon>person_outline</mat-icon>-->
-    <!--                    </button>-->
-    <!--                    <mat-menu #menu="matMenu">-->
-    <!--                        <button mat-menu-item>-->
-    <!--                            <mat-icon>exit_to_app</mat-icon>-->
-    <!--                            Sign out-->
-    <!--                        </button>-->
-    <!--                    </mat-menu>-->
+    <ng-template #anonymousUser>
 
-    <!--                </li>-->
-    <!--            </ul>-->
-    <!--        </div>-->
+
+    </ng-template>
+
+            <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+                <ul fxLayout="row" fxLayoutGap="20px">
+
+                    <li>
+                      <span class="displayName" *ngIf="auth.user$ | async as user; else anonymousUser"> {{ user.displayName }} </span>
+
+                        <button mat-button [matMenuTriggerFor]="menu" *ngIf="auth.user$ | async as user">
+                            <mat-icon>person_outline</mat-icon>
+                        </button>
+
+                        <mat-menu #menu="matMenu">
+                          <ng-template #anonymousUser>
+                            <button mat-menu-item (click)="clickLoginBtn()" class="loginButton">
+<!--                                <mat-icon>exit_to_app</mat-icon>-->
+                                Login
+                            </button>
+                          </ng-template>
+
+
+                          <button mat-menu-item *ngIf="auth.user$">
+                            <mat-icon>help_outline</mat-icon>
+                            Help
+                          </button>
+
+                          <button mat-menu-item *ngIf="auth.user$">
+                            <mat-icon>settings</mat-icon>
+                            Settings
+                          </button>
+
+                          <button mat-menu-item (click)="logout()" *ngIf="auth.user$">
+                            <mat-icon>power_settings_new</mat-icon>
+                            Log out
+                          </button>
+
+                        </mat-menu>
+
+                    </li>
+                </ul>
+            </div>
   </mat-toolbar-row>
 </mat-toolbar>

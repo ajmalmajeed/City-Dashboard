@@ -18,6 +18,10 @@ import { TimelineChartsComponent } from './modules/timeline-charts/timeline-char
 import { BarChartComponent } from './modules/bar-chart/bar-chart.component';
 import { PieChartComponent } from './modules/pie-chart/pie-chart.component';
 import {MatIconModule} from '@angular/material';
+import { LoginComponent } from './modules/login/login.component';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {AuthService} from './services/auth.service';
+import {AuthGuard} from './services/auth-guard.service';
 
 
 @NgModule({
@@ -27,6 +31,7 @@ import {MatIconModule} from '@angular/material';
     TimelineChartsComponent,
     BarChartComponent,
     PieChartComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,11 @@ import {MatIconModule} from '@angular/material';
     }),
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    AngularFireAuth,
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
