@@ -10,7 +10,7 @@ import {TimelineChartsComponent} from './modules/timeline-charts/timeline-charts
 import {BarChartComponent} from './modules/bar-chart/bar-chart.component';
 import {PieChartComponent} from './modules/pie-chart/pie-chart.component';
 import {LoginComponent} from './modules/login/login.component';
-import {AuthGuard} from './services/auth-guard.service';
+import {AuthGuard} from './services/authentication/auth-guard.service';
 
 const routes: Routes = [{
   path: '',

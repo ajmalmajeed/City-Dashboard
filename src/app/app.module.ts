@@ -20,8 +20,8 @@ import { PieChartComponent } from './modules/pie-chart/pie-chart.component';
 import {MatIconModule} from '@angular/material';
 import { LoginComponent } from './modules/login/login.component';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {AuthService} from './services/auth.service';
-import {AuthGuard} from './services/auth-guard.service';
+import {AuthService} from './services/authentication/auth.service';
+import {AuthGuard} from './services/authentication/auth-guard.service';
 
 
 @NgModule({
