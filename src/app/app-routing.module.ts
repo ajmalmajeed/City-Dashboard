@@ -11,6 +11,7 @@ import {BarChartComponent} from './modules/bar-chart/bar-chart.component';
 import {PieChartComponent} from './modules/pie-chart/pie-chart.component';
 import {LoginComponent} from './modules/login/login.component';
 import {AuthGuard} from './services/authentication/auth-guard.service';
+import {EkvaMvpOneComponent} from './modules/ekva-mvp-one/ekva-mvp-one.component';
 
 const routes: Routes = [{
   path: '',
@@ -52,7 +53,14 @@ const routes: Routes = [{
       path: 'pie-chart',
       component: PieChartComponent,
       canActivate: [AuthGuard]
-    }]
+    },
+    {
+      path: 'ekva',
+      component: EkvaMvpOneComponent,
+      canActivate: [AuthGuard]
+    }
+
+  ]
 }];
 
 @NgModule({

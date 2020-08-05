@@ -7,8 +7,4 @@ export interface DisposalsModel {
   isRecyclable: boolean;
   points: number;
   amount: number;
-
-
-
-
 }

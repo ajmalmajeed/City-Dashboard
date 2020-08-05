@@ -25,17 +25,17 @@ export class BarChartComponent implements OnInit {
   public barChartData = [
     {
       data: [10, 17, 39, 50, 40, 75, 80],
-      label: "Pet Bottles",
+      label: "Beverages",
       backgroundColor: "#73bac7",
       hoverBackgroundColor: "#73bac7",
     },
     {
       data: [28, 30, 36, 40, 35, 55, 70],
-      label: "Tin Cans",
+      label: "Frozen Products",
       backgroundColor: "#94d4b4",
       hoverBackgroundColor: "#94d4b4",
     },
-    { data: [15, 23, 35, 40, 38, 55, 67], label: "Cardboard Boxes" },
+    { data: [15, 23, 35, 40, 38, 55, 67], label: "Pet Bottles" },
   ];
 
   ngOnInit() {}

@@ -23,6 +23,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {AuthService} from './services/authentication/auth.service';
 import {AuthGuard} from './services/authentication/auth-guard.service';
 import {UserService} from './services/user/user.service';
+import { EkvaMvpOneComponent } from './modules/ekva-mvp-one/ekva-mvp-one.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {UserService} from './services/user/user.service';
     BarChartComponent,
     PieChartComponent,
     LoginComponent,
+    EkvaMvpOneComponent,
   ],
   imports: [
     BrowserModule,

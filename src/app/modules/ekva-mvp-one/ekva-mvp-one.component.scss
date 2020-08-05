@@ -1,0 +1,28 @@
+agm-map {
+  height: 750px;
+}
+
+#pickupsContainer {
+  margin-bottom: 30px;
+}
+
+#heading {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #da190b;
+}
+
+.pickupLocation {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 30px;
+  padding: 7px;
+  background-color: #7ecf8d;
+  display: inline-block;
+}
+
+.list-section {
+  padding: unset;
+}
