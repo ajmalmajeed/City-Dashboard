@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyAopKRYsMrTXUXZmEHBmBGaQCy4ALKIyqQ',
-    authDomain: 'citycollection-38b54.firebaseapp.com',
-    databaseURL: 'https://citycollection-38b54.firebaseio.com',
-    projectId: 'citycollection-38b54',
-    storageBucket: 'citycollection-38b54.appspot.com',
-    messagingSenderId: '911733827894',
-    appId: '1:911733827894:web:b90ca258b66a1891d7eb97',
-    measurementId: 'G-7C8HHYMD9F'
+    apiKey: "AIzaSyAHSXhk4wCLCbvfjU_JhN_7F521IpNmp6M",
+    authDomain: "mckinseyops.firebaseapp.com",
+    databaseURL: "https://mckinseyops.firebaseio.com",
+    projectId: "mckinseyops",
+    storageBucket: "mckinseyops.appspot.com",
+    messagingSenderId: "430786175454",
+    appId: "1:430786175454:web:84a5fe00d384c60de67d4f",
+    measurementId: "G-W72M30P4RX"
   }
 };
 
