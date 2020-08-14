@@ -12,6 +12,7 @@ import {PieChartComponent} from './modules/pie-chart/pie-chart.component';
 import {LoginComponent} from './modules/login/login.component';
 import {AuthGuard} from './services/authentication/auth-guard.service';
 import {EkvaMvpOneComponent} from './modules/ekva-mvp-one/ekva-mvp-one.component';
+import {CustomerManagementComponent} from './modules/customer-management/customer-management.component';
 
 const routes: Routes = [{
   path: '',
@@ -57,6 +58,11 @@ const routes: Routes = [{
     {
       path: 'ekva',
       component: EkvaMvpOneComponent,
+      canActivate: [AuthGuard]
+    },
+    {
+      path: 'customer-management',
+      component: CustomerManagementComponent,
       canActivate: [AuthGuard]
     }
 
